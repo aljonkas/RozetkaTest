@@ -16,6 +16,14 @@ public class MainPage {
     WebElement button;
     @FindBy(css = ".novisited.auth-f-signup-link")
     WebElement register;
+    @FindBy(css = ".header-search-input-text.passive")
+    WebElement search;
+
+
+    public void goToEnterShoes(){
+        search.sendKeys("обувь");
+
+    }
 
 
     public void goToReg() {

@@ -1,30 +1,38 @@
 package pages;
 
-import org.junit.Assert;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+
+
+
+
+
 
 /**
  * Created by Alona on 16.07.2015.
  */
 public class RegisterPage {
     public static final String ENTER_NAME = "TEST";
-    public static final String ENTER_EMAIL = "test1234@gmail.com";
+    public static final String ENTER_EMAIL = "t90@gmail.com";
     public static final String ENTER_PASS = "test123";
     private WebDriver driver;
 
-    @FindBy(xpath = "html/body/div[1]/div/div/div/div/form/div[1]/input")
+    @FindBy(name = "title")
     WebElement name;
-    @FindBy(xpath = "html/body/div[1]/div/div/div/div/form/div[2]/input")
+    @FindBy(name = "email")
     WebElement email;
-    @FindBy(xpath = "html/body/div[1]/div/div/div/div/form/div[3]/input")
+    @FindBy(name = "password")
     WebElement pasw;
-    @FindBy(xpath = "html/body/div[1]/div/div/div/div/form/div[4]/span/button")
+    @FindBy(xpath = ".//div/span/button")
     WebElement register;
-
-    @FindBy()
+    @FindBy(css = ".header-user-link.sprite-side.novisited.xhr")
+    WebElement header;
 
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
@@ -37,7 +45,14 @@ public class RegisterPage {
         email.sendKeys(ENTER_EMAIL);
         pasw.sendKeys(ENTER_PASS);
         register.click();
+    }
 
+
+    public void goToVerification() {
+
+        Assert.assertTrue(header.getText().contains(ENTER_NAME));
+
+       // System.out.println("Registered successfully");
     }
 
 
