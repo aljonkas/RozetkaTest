@@ -10,16 +10,12 @@ import org.testng.Assert;
 
 
 
-
-
-
-
 /**
  * Created by Alona on 16.07.2015.
  */
 public class RegisterPage {
     public static final String ENTER_NAME = "TEST";
-    public static final String ENTER_EMAIL = "t90@gmail.com";
+    public static final String ENTER_EMAIL = "ta90@gmail.com";
     public static final String ENTER_PASS = "test123";
     private WebDriver driver;
 
@@ -31,8 +27,8 @@ public class RegisterPage {
     WebElement pasw;
     @FindBy(xpath = ".//div/span/button")
     WebElement register;
-    @FindBy(css = ".header-user-link.sprite-side.novisited.xhr")
-    WebElement header;
+    @FindBy(id = "personal_information")
+    WebElement personalinfo;
 
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
@@ -50,7 +46,7 @@ public class RegisterPage {
 
     public void goToVerification() {
 
-        Assert.assertTrue(header.getText().contains(ENTER_NAME));
+        Assert.assertTrue(personalinfo.getText().contains(ENTER_NAME));
 
        // System.out.println("Registered successfully");
     }
