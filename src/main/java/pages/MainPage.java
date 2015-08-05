@@ -12,13 +12,19 @@ import org.openqa.selenium.support.PageFactory;
 public class MainPage {
     private WebDriver driver;
 
-    public static final String ENTER_TEXT = "string";
+    public static final String ENTER_TEXT = "shoes";
+    @FindBy(xpath = "//header/div/div/div[2]/div[3]/form/span/span")
+    WebElement bsearch;
+
+    public static final String ENTER_NAME = "TEST";
+    public static final String ENTER_EMAIL = "ta90@gmail.com";
+    public static final String ENTER_PASS = "test123";
 
     @FindBy(css = ".header-user-link.sprite-side.novisited.xhr")
     WebElement button;
     @FindBy(css = ".novisited.auth-f-signup-link")
     WebElement register;
-    @FindBy(xpath = "html/body/header/div/div/div[2]/div[3]/form/div[1]/div[2]/input")
+    @FindBy(xpath = ".//*[@id='search']/form/div[1]/div[2]/input")
     WebElement search;
 
     @FindBy(xpath = "//div[1]/div/nav/ul/li[2]/a")
@@ -26,13 +32,23 @@ public class MainPage {
     @FindBy(xpath = "//div/nav/ul/li[2]/div/div/div/div/ul/li[1]/a")
     WebElement smartphone;
 
-    @FindBy(xpath = "//div/ul[2]/li[1]/ul/li[1]/a")
-    WebElement allsmartphones;
+
+
+    @FindBy(xpath = "//header/div/div/div[1]/div[1]/div[2]/span[2]/a")
+    WebElement signin;
+    @FindBy(xpath = "//header/div/div/div[1]/div[1]/div[3]/div/div/div/form/div[1]/div[2]/input")
+    WebElement email;
+    @FindBy(xpath = "//header/div/div/div[1]/div[1]/div[3]/div/div/div/form/div[1]/div[3]/div[1]/div[1]/input")
+    WebElement password;
+    @FindBy(xpath = "//header/div/div/div[1]/div[1]/div[3]/div/div/div/form/div[1]/div[3]/div[1]/div[2]/div/span/button")
+    WebElement enter;
+
 
 
 
     public void goToEnterShoes(){
         search.sendKeys(ENTER_TEXT);
+        bsearch.click();
 
     }
 
@@ -51,6 +67,14 @@ public class MainPage {
     public void goToFind() {
         phone.click();
         smartphone.click();
-       // allsmartphones.click();
+      //  allsmartphones.click();
+    }
+
+    public void goToLog() {
+        signin.click();
+        email.sendKeys(ENTER_EMAIL);
+        password.sendKeys(ENTER_PASS);
+        enter.click();
+
     }
 }

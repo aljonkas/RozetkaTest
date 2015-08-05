@@ -2,6 +2,7 @@ package pages;
 
 
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,8 @@ public class RegisterPage {
     @FindBy(id = "personal_information")
     WebElement personalinfo;
 
+
+
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -47,7 +50,6 @@ public class RegisterPage {
     public void goToVerification() {
 
         Assert.assertTrue(personalinfo.getText().contains(ENTER_NAME));
-
        // System.out.println("Registered successfully");
     }
 
