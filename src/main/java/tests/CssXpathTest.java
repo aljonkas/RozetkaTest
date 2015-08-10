@@ -5,6 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.BaseConfig;
 import pages.CssXpath;
 
 import java.util.concurrent.TimeUnit;
@@ -12,16 +13,16 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Alona on 04.08.2015.
  */
-public class CssXpathTest {
-    private WebDriver driver;
+public class CssXpathTest extends BaseConfig{
+   // private WebDriver driver;
     private CssXpath cxtest;
 
-    @BeforeMethod
+   /* @BeforeMethod
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://rozetka.com.ua");
-    }
+    }*/
 
     @Test
     public void goToTestXpath(){
@@ -50,9 +51,9 @@ public class CssXpathTest {
 
     }
 
-    @AfterMethod
+   /* @AfterMethod
     public void tearDown(){
         driver.close();
-    }
+    }*/
 
 }

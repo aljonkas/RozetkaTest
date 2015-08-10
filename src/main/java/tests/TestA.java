@@ -18,7 +18,8 @@ public class TestA {
             WebDriver driver = new FirefoxDriver();
             driver.get("http://aliexpress.com");
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            WebElement element = driver.findElement(By.id("search-dropdown-box"));
+           // WebElement element = driver.findElement(By.id("search-dropdown-box"));
+            WebElement element = driver.findElement(By.xpath(".//*[@id='search-dropdown-box']"));
             System.out.println(element.getText());
 
         }
