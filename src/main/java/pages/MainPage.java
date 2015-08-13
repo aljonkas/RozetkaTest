@@ -29,8 +29,7 @@ public class MainPage {
 
     @FindBy(xpath = "//div[1]/div/nav/ul/li[2]/a")
     WebElement phone;
-    @FindBy(xpath = "//div/nav/ul/li[2]/div/div/div/div/ul/li[1]/a")
-    WebElement smartphone;
+
 
 
 
@@ -66,8 +65,7 @@ public class MainPage {
 
     public void goToFind() {
         phone.click();
-        smartphone.click();
-      //  allsmartphones.click();
+
     }
 
     public void goToLog() {
