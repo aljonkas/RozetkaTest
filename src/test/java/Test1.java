@@ -1,6 +1,3 @@
-package tests;
-
-
 import org.testng.annotations.Test;
 import pages.BaseConfig;
 import pages.MainPage;
@@ -28,7 +25,7 @@ public class Test1 extends BaseConfig {
 
     @Test
     public void goToTest1() {
-        try {
+       try {
             mpage = new MainPage(driver);
             spage = new SmartphonesPage(driver);
             mpage.goToFind();

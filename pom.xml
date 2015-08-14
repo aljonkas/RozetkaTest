@@ -26,7 +26,38 @@
         </dependency>
     </dependencies>
 
-
+    <profiles>
+        <!-- browsers -->
+        <profile>
+        <id>firefox</id>
+        <properties>
+            <capabilities>/firefox.capabilities</capabilities>
+        </properties>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        </profile>
+        <profile>
+            <id>chrome</id>
+            <properties>
+                <capabilities>/chrome.capabilities</capabilities>
+            </properties>
+        </profile>
+        <!-- environments -->
+        <profile>
+            <id>MyProfile</id>
+            <repositories>
+                <repository>
+                    <id>first</id>
+                    <name>Prifile Rozetka</name>
+                    <url>http://www.rozetka.ua</url>
+                </repository>
+            </repositories>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
 
 
 </project>
