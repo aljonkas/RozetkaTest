@@ -49,7 +49,7 @@
             <repositories>
                 <repository>
                     <id>first</id>
-                    <name>Prifile Rozetka</name>
+                    <name>ProfileRozetka</name>
                     <url>http://www.rozetka.ua</url>
                 </repository>
             </repositories>

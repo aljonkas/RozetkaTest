@@ -20,6 +20,8 @@ public class MainPage {
     public static final String ENTER_EMAIL = "ta90@gmail.com";
     public static final String ENTER_PASS = "test123";
 
+    public static final String BASE_URL = "www.rozetka.ua";
+
     @FindBy(css = ".header-user-link.sprite-side.novisited.xhr")
     WebElement button;
     @FindBy(css = ".novisited.auth-f-signup-link")
@@ -42,7 +44,13 @@ public class MainPage {
     @FindBy(xpath = "//header/div/div/div[1]/div[1]/div[3]/div/div/div/form/div[1]/div[3]/div[1]/div[2]/div/span/button")
     WebElement enter;
 
-
+//Navigation
+    @FindBy(xpath = ".//*[@id='m-main']/li[1]/a")
+    WebElement netbook;
+    @FindBy(xpath = ".//*[@id='m-main']/li[13]/a")
+    WebElement clothes;
+    @FindBy(xpath = ".//*[@id='m-main']/li[15]/a")
+    WebElement cosmetic;
 
 
     public void goToEnterShoes(){
@@ -73,6 +81,24 @@ public class MainPage {
         email.sendKeys(ENTER_EMAIL);
         password.sendKeys(ENTER_PASS);
         enter.click();
+
+    }
+
+    public void goToNav() {
+        netbook.click();
+        driver.get(BASE_URL);
+        clothes.click();
+        driver.get(BASE_URL);
+        cosmetic.click();
+    }
+
+    public void goToNav1() {
+        driver.get(BASE_URL+"/computers-notebooks");
+        driver.get(BASE_URL);
+        driver.get(BASE_URL+"/phones-mp3-gps");
+        driver.get(BASE_URL);
+        driver.get(BASE_URL+"/tv-photo-video");
+
 
     }
 }
