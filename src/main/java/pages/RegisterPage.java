@@ -11,9 +11,7 @@ import org.testng.Assert;
 
 
 
-/**
- * Created by Alona on 16.07.2015.
- */
+
 public class RegisterPage {
     public static final String ENTER_NAME = "TEST";
     public static final String ENTER_EMAIL = "ta90@gmail.com";

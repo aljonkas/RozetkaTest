@@ -6,15 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by Alona on 16.07.2015.
- */
+
 public class MainPage {
     private WebDriver driver;
 
     public static final String ENTER_TEXT = "shoes";
     @FindBy(xpath = "//header/div/div/div[2]/div[3]/form/span/span")
     WebElement bsearch;
+
 
     public static final String ENTER_NAME = "TEST";
     public static final String ENTER_EMAIL = "ta90@gmail.com";

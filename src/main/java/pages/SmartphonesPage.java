@@ -11,15 +11,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Alona on 23.07.2015.
- */
+
 public class SmartphonesPage {
     private WebDriver driver;
 
     @FindBy(xpath = ".//*[@id='head_banner_container']/div/div[2]/div/div/div[1]/div/ul[2]/li[1]/ul/li[1]/a")
     WebElement smartphone;
-    //a[text()='Смартфоны']
 
     @FindBy(xpath = ".//*[@id='head_banner_container']/div/div[2]/div[2]/div/div[1]/div/ul[2]/li[1]/ul/li[1]/a")
     WebElement allsmartphones;

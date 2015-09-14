@@ -5,9 +5,7 @@ import pages.RegisterPage;
 
 
 
-/**
- * Created by Alona on 22.07.2015.
- */
+
 public class LoginTest extends BaseConfig{
     private MainPage mpage;
     private RegisterPage rpage;

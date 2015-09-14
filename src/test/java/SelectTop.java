@@ -6,9 +6,8 @@ import pages.SmartphonesPage;
 import java.io.IOException;
 
 
-/**
- * Created by Alona on 21.07.2015.
- * - зайти на сайт rozetka.com.ua
+/*
+ - зайти на сайт rozetka.com.ua
  - перейти у розділ "Телефони, MP3, GPS" +
  - перейти у розділ "Смартфони"          +
  - перейти у розділ "Всі смартфони"      +
@@ -16,7 +15,7 @@ import java.io.IOException;
  */
 
 
-public class Test1 extends BaseConfig {
+public class SelectTop extends BaseConfig {
     final static String FILE_NAME = "E:\\Test1_result.txt";
 
     private MainPage mpage;

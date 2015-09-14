@@ -6,18 +6,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by Alona on 04.08.2015.
- */
-public class TestA {
+
+public class TestAliexpress {
 
     @Test
         public static void main(String[] args) {
             WebDriver driver = new FirefoxDriver();
             driver.get("http://aliexpress.com");
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-           // WebElement element = driver.findElement(By.id("search-dropdown-box"));
-            WebElement element = driver.findElement(By.xpath(".//*[@id='search-dropdown-box']"));
+            WebElement element = driver.findElement(By.className("searchbar-operate-box"));
             System.out.println(element.getText());
 
         }

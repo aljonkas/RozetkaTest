@@ -5,9 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by Alona on 04.08.2015.
- */
+
 public class CssXpath {
     private WebDriver driver;
 
